@@ -2,14 +2,15 @@ const {PlaywrightTestConfig} = require('@playwright/test');
 
 const config = {
     retries: 1,
-    timout: 30000,
+    timout: 50000,
     reporter:'./reporter.js',
     use: {
         baseURL: 'https://the-internet.herokuapp.com',
         headless: true,
         viewport: {width: 1280, height: 720},
         video: 'off',
-        screenshot: 'off'
+        screenshot: 'off',
+        trace: 'off'
     },
 
     projects: [
