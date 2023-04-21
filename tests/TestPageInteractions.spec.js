@@ -1,6 +1,6 @@
 const {test, expect} = require('@playwright/test');
 
-test.describe("Test examples",()=>{
+test.describe("Test actions examples",()=>{
 
     test("Drag and Drop test example", async ({page}) => {
 
