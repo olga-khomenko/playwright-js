@@ -9,7 +9,8 @@ const config = {
         headless: true,
         viewport: {width: 1280, height: 720},
         video: 'off',
-        screenshot: 'off'
+        screenshot: 'off',
+        trace: 'off'
     },
 
     projects: [
