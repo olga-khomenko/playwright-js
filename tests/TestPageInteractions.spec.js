@@ -32,7 +32,15 @@ test.describe("Test actions examples",()=>{
         const frameTest = page.frameLocator('#mce_0_ifr').locator('html');
         await frameTest.click();
         await frameTest.type('This is just a test typing inside iframe.');
+    })
+    
+    test("Hovering over objects", async ({page}) => {
 
+        await page.goto('https://the-internet.herokuapp.com/hovers'); 
+        await page.hover('[alt="User Avatar"]');
+        await expect(page.locator('text=name: user1')).toBeVisible();
+        await page.locator('text=View profile').first().click();
+        await page.pause();
 
     })
 })
